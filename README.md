@@ -42,7 +42,7 @@ Then run the following command
 * Copy the file contents of calc.py
 * Paste it into the python compiler of your choice
 
-After running **test.py** you should see a screen like this
+After running **calc.py** you should see a screen like this
 ![imageofcoderunning](https://github.com/WTCSC/the-overly-verbose-gpa-calculator-rocktutman1/blob/feedback/.images/Screenshot%202025-10-21%20011502.png)
 ## Configuration
 
