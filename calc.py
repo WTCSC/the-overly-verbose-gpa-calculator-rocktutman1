@@ -122,7 +122,7 @@ if Do_Goal == "y" or Do_Goal == "Y":
                 print (f"To reach a GPA of {Goal_GPA}, you need to get at least a 4.0 in class {Iterate}")
                 Goal_Avaiable = True
     if Goal_Avaiable == False:
-        print ("It is not possible to reach your goal GPA with the current classes.")
+        print ("It is not possible to reach your goal GPA by only changing one class.")
 else:
     print ("GOODBYE!")
     exit()
