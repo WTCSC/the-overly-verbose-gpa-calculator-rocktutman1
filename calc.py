@@ -19,7 +19,7 @@ while Classes_Num_Valid == False:
         continue
 if Classes_Num == 0:
     print ("Looks like you dont have ANY classes! Why are you even here???")
-    exit
+    exit()
 for i in range(Classes_Num):
     Class_Grade_Valid = False
     while Class_Grade_Valid == False:
@@ -28,7 +28,7 @@ for i in range(Classes_Num):
             if 0 <= Class_Grade <= 4:
                 Class_Grade_Valid = True
             else:
-                print ("That is not between 1.0 and 4.0!")
+                print ("That is not between 0.0 and 4.0!")
                 continue
         except ValueError:
             print ("That is not a valid grade!")
@@ -72,11 +72,11 @@ if Semester_Desired == "1":
 if Semester_Desired == "2":
     print (f"Your semester 2 GPA is {GPA_Second} ")
     if GPA_Second > GPA_Overall:
-        print ("Your first second GPA is greater than your overall")
+        print ("Your second GPA is greater than your overall")
     if GPA_Second == GPA_Overall:
-        print ("Your first second GPA is equal to your overall")
+        print ("Your second GPA is equal to your overall")
     if GPA_Second < GPA_Overall:
-        print ("Your first second GPA is lower than your overall")
+        print ("Your second GPA is lower than your overall")
 if Sem2_Classes_Num != 0 and Sem1_Classes_Num != 0:
     if GPA_First > GPA_Second:
         print("Your first semster GPA is higher than second")
@@ -93,7 +93,36 @@ while Do_Goal_Valid == False:
     else:
         print ("Invalid input")
 if Do_Goal == "y" or Do_Goal == "Y":
-    pass
+    Goal_GPA_Valid = False
+    Goal_Avaiable = False
+    while Goal_GPA_Valid == False:
+        try:
+            Goal_GPA = float(input ("Enter your goal GPA (0.0-4.0): "))
+            if 0 <= Goal_GPA <= 4:
+                Goal_GPA_Valid = True
+            else:
+                print ("That is not between 0.0 and 4.0!")
+        except ValueError:
+            print ("That is not a valid GPA!")
+    if Sem2_Classes_Num == 0 or Sem1_Classes_Num == 0:
+        Iterate = 0
+        for i in Grades_List:
+            Iterate += 1
+            GPA_Overall_Test = round((sum(Grades_List)+4-i)/len(Grades_List),1)
+            if GPA_Overall_Test >= Goal_GPA:
+                print (f"To reach a GPA of {Goal_GPA}, you need to get at least a 4.0 in class {Iterate}")
+                Goal_Avaiable = True
+    else:
+        print ("Since semester 1 is already completed, analyzing semester 2 grades needed to reach goal GPA")
+        Iterate = Sem1_Classes_Num
+        for i in Grades_List[Sem1_Classes_Num:]:
+            Iterate += 1
+            GPA_Overall_Test = round((sum(Grades_List)+4-i)/len(Grades_List),1)
+            if GPA_Overall_Test >= Goal_GPA:
+                print (f"To reach a GPA of {Goal_GPA}, you need to get at least a 4.0 in class {Iterate}")
+                Goal_Avaiable = True
+    if Goal_Avaiable == False:
+        print ("It is not possible to reach your goal GPA with the current classes.")
 else:
     print ("GOODBYE!")
-    exit
+    exit()
