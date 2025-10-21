@@ -7,7 +7,7 @@
 
 The **rocktutman1 GPA calculator** is a *usefull* and *complex* academic tool to help set goals
 
-![flowchartofrunningcode](https://github.com/WTCSC/the-overly-verbose-gpa-calculator-rocktutman1/blob/main/.images/Screenshot%202025-10-21%20012358.png)
+![flowchartofrunningcode](https://github.com/WTCSC/the-overly-verbose-gpa-calculator-rocktutman1/blob/feedback/.images/Screenshot%202025-10-21%20012358.png)
 
 ## Requirements
 
@@ -32,8 +32,6 @@ Clone the GIT repository
 
 >cd the-overly-verbose-gpa-calculator-rocktutman1/
 
->git checkout main
-
 Then run the following command 
 
 >python3 calc.py
@@ -45,7 +43,7 @@ Then run the following command
 * Paste it into the python compiler of your choice
 
 After running **test.py** you should see a screen like this
-![imageofcoderunning](https://github.com/WTCSC/the-overly-verbose-gpa-calculator-rocktutman1/blob/main/.images/Screenshot%202025-10-21%20011502.png)
+![imageofcoderunning](https://github.com/WTCSC/the-overly-verbose-gpa-calculator-rocktutman1/blob/feedback/.images/Screenshot%202025-10-21%20011502.png)
 ## Configuration
 
 No configuration is currently avaiable
